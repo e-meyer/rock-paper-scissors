@@ -12,6 +12,14 @@ body {
     justify-content: space-between;
 }
 
+/*
+
+
+    HEADER
+
+
+*/
+
 .header a {
     text-decoration: none;
     color: rgb(239, 239, 239);
@@ -29,16 +37,16 @@ li {
 }
 
 .htp {
-    background-color: rgb(118, 111, 203);
+    background-color: rgba(237, 0, 255, 0.5);
     padding: 10px 30px;
     border-radius: 10px;
-    filter:drop-shadow(0 0 0px rgb(118, 111, 203));
+    filter:drop-shadow(0 0 0px rgb(237, 0, 255));
     transition: 0.5s;
 }
 
 .htp:hover {
-    background-color: rgb(92, 82, 202);
-    filter:drop-shadow(0 0 10px rgb(92, 82, 202));
+    background-color: rgb(222, 96, 231);
+    filter:drop-shadow(0 0 10px rgb(222, 96, 231));
     transform:scale(1.1);
 }
 
@@ -50,30 +58,38 @@ li {
     
 }
 
-.content li {
+/*
+
+
+    PLAYER UI
+
+
+*/
+
+.player-ui li {
     
     opacity: 0.6;
     transition: 0.3s;
 }
 
-.content li:hover {
+.player-ui li:hover {
     opacity: 1;
     transform: scale(1.1);
 }
 
-.content ul {
+.player-ui ul {
     display: flex;
     gap: 30px;
 }
 
-.content {
+.player-ui {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 30px;
 }
 
-.content .text {
+.player-ui .text {
     font-size: 36px;
     font-weight: 900; 
     background-color: rgba(0,0,0,0.4);
@@ -81,6 +97,97 @@ li {
     padding: 5px 20px;
     color: rgb(239, 239, 239);
 }
+
+/*
+
+
+    COMPUTER
+
+
+*/
+
+.computer li {
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.computer ul {
+    display: flex;
+    gap: 30px;
+}
+
+.computer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.computer .text {
+    font-size: 36px;
+    font-weight: 900; 
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    padding: 5px 20px;
+    color: rgb(239, 239, 239);
+}
+
+/*
+
+
+    SCOREBOARD
+
+
+*/
+
+.scoreboard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color:rgb(228, 228, 228);
+    font-size: 28px;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.scoreboard .player {
+    background-color: rgb(237, 0, 255);
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.scoreboard .player-points {
+    border-radius: 8px;
+    padding: 0px 10px;
+    background-color: rgb(204, 31, 227, 0.8);
+}
+
+.scoreboard #computer {
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.scoreboard .computer-points {
+    border-radius: 8px;
+    padding: 0px 10px;
+    background-color: rgba(0,0,0,0.4);
+    background-color: 
+}
+
+.scoreboard .versus {
+    font-size: 30px;
+    font-weight: 900;
+    color: rgba(0,0,0,0.4);
+}
+
+/*
+
+
+    FOOTER
+
+
+*/
 
 .footer {
     display: flex;
@@ -91,11 +198,7 @@ li {
     font-size: 22px;
 }
 
-<<<<<<< HEAD
 .footer a {
-=======
-.footer a{
->>>>>>> 03c0d264cfbda9f85eef5bf03ab722fbe3d9e36f
     text-decoration: none;
     color:rgb(118, 111, 203);
     border-bottom: 3px groove rgb(86, 76, 199);
