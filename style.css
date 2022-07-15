@@ -91,7 +91,11 @@ li {
     font-size: 22px;
 }
 
+<<<<<<< HEAD
 .footer a {
+=======
+.footer a{
+>>>>>>> 03c0d264cfbda9f85eef5bf03ab722fbe3d9e36f
     text-decoration: none;
     color:rgb(118, 111, 203);
     border-bottom: 3px groove rgb(86, 76, 199);
