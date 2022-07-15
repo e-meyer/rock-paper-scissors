@@ -1,4 +1,5 @@
 const buttons = Array.from(document.getElementsByClassName('button'))
+const buttons_pc = Array.from(document.querySelectorAll('#computer'))
 let changeScore = document.querySelectorAll('.player-points, .computer-points')
 
 buttons.forEach((button) => {
@@ -6,33 +7,27 @@ buttons.forEach((button) => {
         let playerSelection = e.currentTarget.id
         let computerSelection = computerPlay()
 
+        let sizeIncreaser = document.querySelector(`.${computerSelection.toLowerCase()}`)
+        sizeIncreaser.classList.add('toggle')
+
         let finalScore = checkStatus(playerSelection, computerSelection)
 
-        if (finalScore == 3) {
-            console.log('PL WIN ' + computerSelection + ' ' + playerSelection)
-            changeScore[1].innerText++;
-        }
-        else if (finalScore == 2) {
-            console.log('PC WIN ' + computerSelection + ' ' + playerSelection)
-            changeScore[0].innerText++;
-        }
-            
+        if (finalScore == 3) changeScore[1].innerText++;
+        else if (finalScore == 2) changeScore[0].innerText++;
+
     })
+    
 })
 
-function addStyleForComputer(selection) {
-    let sizeIncreaser = document.querySelector(`.${selection.toLowerCase()}`)
-    
-    sizeIncreaser.classList.add('toggle')
-}
+buttons_pc.forEach(buttonpc => buttonpc.addEventListener('transitionend', (e) => {
+    e.currentTarget.classList.remove('toggle');
+}))
 
 function computerPlay() {
     let arrOptions = ['Rock', 'Paper', 'Scissors']
     let randomIndex = Math.floor(Math.random() * (2 + 1))
-    addStyleForComputer(arrOptions[randomIndex].toLowerCase())
 
     return arrOptions[randomIndex]
-
 }
 
 function checkStatus(playerSelection, computerSelection) {

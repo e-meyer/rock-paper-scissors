@@ -106,29 +106,29 @@ li {
 
 */
 
-.computer li {
+.computer-imgs li {
     opacity: 0.6;
-    transition: 0.3s;
+    transition: all 2s ease;
 }
 
-.computer .toggle {
+.computer-imgs .toggle {
     opacity: 1;
     transform: scale(1.1);
 }
 
-.computer ul {
+.computer-imgs ul {
     display: flex;
     gap: 30px;
 }
 
-.computer {
+.computer-imgs {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 30px;
 }
 
-.computer .text {
+.computer-imgs .text {
     font-size: 36px;
     font-weight: 900; 
     background-color: rgba(0,0,0,0.4);
