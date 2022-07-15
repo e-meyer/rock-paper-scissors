@@ -1,17 +1,38 @@
+const buttons = Array.from(document.getElementsByClassName('button'))
+let changeScore = document.querySelectorAll('.player-points, .computer-points')
+
+buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        let playerSelection = e.currentTarget.id
+        let computerSelection = computerPlay()
+
+        let finalScore = checkStatus(playerSelection, computerSelection)
+
+        if (finalScore == 3) {
+            console.log('PL WIN ' + computerSelection + ' ' + playerSelection)
+            changeScore[1].innerText++;
+        }
+        else if (finalScore == 2) {
+            console.log('PC WIN ' + computerSelection + ' ' + playerSelection)
+            changeScore[0].innerText++;
+        }
+            
+    })
+})
+
+function addStyleForComputer(selection) {
+    let sizeIncreaser = document.querySelector(`.${selection.toLowerCase()}`)
+    
+    sizeIncreaser.classList.add('toggle')
+}
+
 function computerPlay() {
     let arrOptions = ['Rock', 'Paper', 'Scissors']
     let randomIndex = Math.floor(Math.random() * (2 + 1))
+    addStyleForComputer(arrOptions[randomIndex].toLowerCase())
 
     return arrOptions[randomIndex]
 
-}
-
-function playerPlay() {
-    let playerSelection = prompt(
-        "Make you decision, challenger. You can choose between 'Rock', 'Paper' and 'Scissors'"
-    )
-
-    return playerSelection.toString()
 }
 
 function checkStatus(playerSelection, computerSelection) {
@@ -48,33 +69,10 @@ function checkStatus(playerSelection, computerSelection) {
     }
 }
 
-function countPoints(valueReturned, pointsCounter){
-    if (valueReturned == 3) pointsCounter++
-    else if (valueReturned == 2) pointsCounter--
+// function countPoints(valueReturned, pointsCounter){
+//     if (valueReturned == 3) pointsCounter++
+//     else if (valueReturned == 2) pointsCounter--
     
-    return pointsCounter
-}
+//     return pointsCounter
+// }
 
-function game() {
-    let pointsCounter = 0
-    for (let i = 0; i < 5; i++) {
-
-        let computerSelection = computerPlay()
-        console.log('Computer have chosen ' + computerSelection)
-
-        let playerSelection = playerPlay()
-        console.log('Player have chosen ' + playerSelection)
-
-        let valueReturned = checkStatus(playerSelection, computerSelection)
-
-        pointsCounter = countPoints(valueReturned, pointsCounter)
-
-        console.log(pointsCounter)
-    }
-
-    if (pointsCounter < 0) return 'Computer won'
-    else if(pointsCounter > 0) return 'Player won'
-    else return 'Draw'
-}
-
-console.log(game())

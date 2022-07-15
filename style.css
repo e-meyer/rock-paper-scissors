@@ -111,6 +111,11 @@ li {
     transition: 0.3s;
 }
 
+.computer .toggle {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
 .computer ul {
     display: flex;
     gap: 30px;
@@ -172,7 +177,6 @@ li {
     border-radius: 8px;
     padding: 0px 10px;
     background-color: rgba(0,0,0,0.4);
-    background-color: 
 }
 
 .scoreboard .versus {
