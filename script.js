@@ -63,11 +63,3 @@ function checkStatus(playerSelection, computerSelection) {
             break
     }
 }
-
-// function countPoints(valueReturned, pointsCounter){
-//     if (valueReturned == 3) pointsCounter++
-//     else if (valueReturned == 2) pointsCounter--
-    
-//     return pointsCounter
-// }
-
