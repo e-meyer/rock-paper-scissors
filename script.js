@@ -7,8 +7,7 @@ buttons.forEach((button) => {
         let playerSelection = e.currentTarget.id
         let computerSelection = computerPlay()
 
-        let sizeIncreaser = document.querySelector(`.${computerSelection.toLowerCase()}`)
-        sizeIncreaser.classList.add('toggle')
+        addStyle(computerSelection);
 
         let finalScore = checkStatus(playerSelection, computerSelection)
 
@@ -18,6 +17,11 @@ buttons.forEach((button) => {
     })
     
 })
+
+let addStyle = (selection) => {
+    let sizeIncreaser = document.querySelector(`.${selection.toLowerCase()}`)
+    sizeIncreaser.classList.add('toggle')
+}
 
 buttons_pc.forEach(buttonpc => buttonpc.addEventListener('transitionend', (e) => {
     e.currentTarget.classList.remove('toggle');
