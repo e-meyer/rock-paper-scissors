@@ -36,40 +36,27 @@ function computerPlay() {
     return arrOptions[randomIndex]                                                          // chose between rock, paper and scissors
 }
 
-/*
-
-    REMINDER: CHANGE FUNCTION RETURNING 1, 2 AND 3 TO RETURN TRUE OR FALSE
-    BECAUSE RETURNING 1 IS NOT CHANGING ANYTHING IN THE RESULT
-
-*/
-
 function checkStatus(playerSelection, computerSelection) {                                  
     switch (playerSelection.toUpperCase()) {
         case 'ROCK':
-            if (computerSelection.toUpperCase() == 'ROCK') {
-                return 1                                                   // draw
-            } else if (computerSelection.toUpperCase() == 'PAPER') {
+            if (computerSelection.toUpperCase() == 'PAPER')
                 return 2                                                   // lost
-            } else 
+            else if (computerSelection.toUpperCase() == 'SCISSORS')
                 return 3                                                   // won
             break;
         case 'PAPER':
-            if (computerSelection.toUpperCase() == 'PAPER') {
-                return 1                                                   // draw
-            } else if (computerSelection.toUpperCase() == 'SCISSORS') {
+            if (computerSelection.toUpperCase() == 'SCISSORS') 
                 return 2                                                   // lost
-            } else 
+            else if (computerSelection.toUpperCase() == 'ROCK')
                 return 3                                                   // won
             
             break;
         case 'SCISSORS':
-            if (computerSelection.toUpperCase() == 'SCISSORS') {
-                return 1                                                   // draw
-            } else if (computerSelection.toUpperCase() == 'ROCK') {
+            if (computerSelection.toUpperCase() == 'ROCK')
                 return 2                                                   // lost
-            } else {
+            else if (computerSelection.toUpperCase() == 'PAPER') 
                 return 3                                                   // won
-            }
+            
             break
         default:
             return
