@@ -1,24 +1,54 @@
 const buttons = Array.from(document.getElementsByClassName('button'))
 const buttons_pc = Array.from(document.querySelectorAll('#computer'))
+let versus = document.querySelector('.versus')
 let changeScore = document.querySelectorAll('.player-points, .computer-points')             // retusn a nodelist of 2 position which will be used to 
                                                                                             // display the score of the computer and the player
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
+        if(button.style.cursor == 'not-allowed') return;
+
+        buttons.forEach((button) => {
+            button.style.cursor = 'not-allowed'; 
+        })
+
         let playerSelection = e.currentTarget.id
         let computerSelection = computerPlay()
+
 
         addStyle(computerSelection);
 
         let finalScore = checkStatus(playerSelection, computerSelection)
 
-        if (finalScore == 3) changeScore[1].innerText++;                                    // if the checkstatus function returns 3, then the points will
+        if (finalScore == 3) { 
+            changeScore[1].innerText++;                                                     // if the checkstatus function returns 3, then the points will
                                                                                             // go to the player
+            versus.innerText = `You won! ${capitalize(playerSelection)} wins over ${computerSelection}`
+            versus.style.color = 'rgb(222, 96, 231)'
+        }
+        else if (finalScore == 2){
+            changeScore[0].innerText++;                                                     // if it returns 2 then it will be counted for the computer
 
-        else if (finalScore == 2) changeScore[0].innerText++;                               // if it returns 2 then it will be counted for the computer
+            versus.innerText = `You lost! ${computerSelection} wins over ${capitalize(playerSelection)}`
+            versus.style.color = 'rgba(0,0,0,0.4)'
+        }
 
+        setTimeout(() => {
+            buttons.forEach((button) => {
+                button.style.cursor = 'pointer'; 
+                versus.innerText = 'x'
+                versus.style.color = 'rgba(0,0,0,0.4)'
+            })}, 2500);
+        
     })
     
 })
+
+function capitalize(str) {
+    str = str.toLowerCase();
+    let firstLetter = str.toUpperCase()[0];
+    str = str.replace(str.charAt(0), '');
+    return firstLetter + str;
+}
 
 let addStyle = (selection) => {
     let sizeIncreaser = document.querySelector(`.${selection.toLowerCase()}`)               // this function is used to show the computer selection
