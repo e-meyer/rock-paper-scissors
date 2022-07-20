@@ -1,6 +1,6 @@
 # Rock, Paper, Scissors
 
-![Game Landing Page](https://imgur.com/TnUvfuP)
+![Game Landing Page](https://i.imgur.com/TnUvfuP.png)
 
 A simple implementation of the very widely known game rock, paper, scissors. 
 
