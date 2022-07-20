@@ -12,7 +12,9 @@ After implementing it in pure javascript code and getting it to work properly, i
 
 > The biggest challenge for me here was, after implementing the whole game, making it so the player couldn't spam click the buttons.
 
-I've tried using setInterval method many times, but it just wasn't working as I wanted it to. So I figured out I could use this function in a different way I was using before. Changing the cursor style inside the setInterval method solved the problem, but then I have to check everytime the buttons gets clicked if the cursor is equals to the one I've set before in setInterval.
+I've tried using setInterval method many times, but it just wasn't working as I wanted it to. So I figured out I could use this function in a different way.
+
+>Changing the cursor style inside the setInterval method solved the problem, but then I have to check everytime the buttons gets clicked if the cursor is equals to the one I've set before in setInterval.
 
 ## :abacus: Technologies
 
