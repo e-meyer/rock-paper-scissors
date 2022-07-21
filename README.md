@@ -22,6 +22,6 @@ I've tried using setInterval method many times, but it just wasn't working as I 
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/>
 
-# :flower_playing_cards: Live version
+## :flower_playing_cards: Live version
 
 To check the live version, click <a href="https://e-meyer.github.io/rock-paper-scissors/" target="_blank">here</a>.
