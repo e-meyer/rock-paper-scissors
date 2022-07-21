@@ -24,4 +24,4 @@ I've tried using setInterval method many times, but it just wasn't working as I 
 
 # :flower_playing_cards: Live version
 
-To check the live version, click <a href="e-meyer.github.io/rock-paper-scissors/">here</a>.
+To check the live version, click <a href="https://e-meyer.github.io/rock-paper-scissors/" target="_blank">here</a>.
