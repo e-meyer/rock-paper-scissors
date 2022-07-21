@@ -1,4 +1,4 @@
-# 💈 Rock, Paper, Scissors
+# :joystick: Rock, Paper, Scissors
 
 ![Game Landing Page](https://i.imgur.com/TnUvfuP.png)
 
@@ -21,3 +21,7 @@ I've tried using setInterval method many times, but it just wasn't working as I 
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/>
+
+# :flower_playing_cards: Live version
+
+To check the live version, click <a href="e-meyer.github.io/rock-paper-scissors/">here</a>.
