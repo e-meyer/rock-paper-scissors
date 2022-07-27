@@ -1,6 +1,6 @@
 # :joystick: Rock, Paper, Scissors
 
-![Game Landing Page](https://i.imgur.com/TnUvfuP.png)
+![Game Landing Page](https://github.com/e-meyer/rock-paper-scissors/blob/main/images/game-screen.png)
 
 A simple implementation of the very widely known game rock, paper, scissors, with a maximum of 5 points.
 
